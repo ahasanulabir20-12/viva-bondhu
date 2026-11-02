@@ -1,0 +1,800 @@
+{
+  "a": [
+    {
+      "n": 1,
+      "name": "Lightning Arrester",
+      "src": "assets/images/a/01.jpeg",
+      "page": 1
+    },
+    {
+      "n": 2,
+      "name": "Spool Insulator",
+      "src": "assets/images/a/02.jpeg",
+      "page": 1
+    },
+    {
+      "n": 3,
+      "name": "Guy Insulator",
+      "src": "assets/images/a/03.jpeg",
+      "page": 2
+    },
+    {
+      "n": 4,
+      "name": "CT — Current Transformer",
+      "src": "assets/images/a/04.jpeg",
+      "page": 2
+    },
+    {
+      "n": 5,
+      "name": "CT — Current Transformer (দ্বিতীয় ছবি)",
+      "src": "assets/images/a/05.jpeg",
+      "page": 2
+    },
+    {
+      "n": 6,
+      "name": "3-Phase Transformer",
+      "src": "assets/images/a/06.jpeg",
+      "page": 3
+    },
+    {
+      "n": 7,
+      "name": "LBS — Load Break Switch",
+      "src": "assets/images/a/07.jpeg",
+      "page": 3
+    },
+    {
+      "n": 8,
+      "name": "HT Fuse",
+      "src": "assets/images/a/08.jpeg",
+      "page": 4
+    },
+    {
+      "n": 9,
+      "name": "Busbar Supporter",
+      "src": "assets/images/a/09.jpeg",
+      "page": 4
+    },
+    {
+      "n": 10,
+      "name": "MCCB",
+      "src": "assets/images/a/10.jpeg",
+      "page": 5
+    },
+    {
+      "n": 11,
+      "name": "3-Phase Capacitor (kVAR) — PFI Panel",
+      "src": "assets/images/a/11.jpeg",
+      "page": 5
+    },
+    {
+      "n": 12,
+      "name": "HT Cable",
+      "src": "assets/images/a/12.jpeg",
+      "page": 6
+    },
+    {
+      "n": 13,
+      "name": "Suspension Insulator",
+      "src": "assets/images/a/13.jpeg",
+      "page": 6
+    },
+    {
+      "n": 14,
+      "name": "Digital Earth Tester",
+      "src": "assets/images/a/14.jpeg",
+      "page": 6
+    },
+    {
+      "n": 15,
+      "name": "Drop-Out Fuse",
+      "src": "assets/images/a/15.jpeg",
+      "page": 7
+    },
+    {
+      "n": 16,
+      "name": "Disc Insulator",
+      "src": "assets/images/a/16.jpeg",
+      "page": 7
+    },
+    {
+      "n": 17,
+      "name": "HRC Fuse — PFI Panel",
+      "src": "assets/images/a/17.jpeg",
+      "page": 7
+    },
+    {
+      "n": 18,
+      "name": "Post Insulator",
+      "src": "assets/images/a/18.jpeg",
+      "page": 8
+    },
+    {
+      "n": 19,
+      "name": "PT — Potential Transformer",
+      "src": "assets/images/a/19.jpeg",
+      "page": 8
+    },
+    {
+      "n": 20,
+      "name": "PFI Relay",
+      "src": "assets/images/a/20.jpeg",
+      "page": 8
+    },
+    {
+      "n": 21,
+      "name": "Digital Megger Meter",
+      "src": "assets/images/a/21.jpeg",
+      "page": 9
+    },
+    {
+      "n": 22,
+      "name": "LT Cable",
+      "src": "assets/images/a/22.jpeg",
+      "page": 9
+    },
+    {
+      "n": 23,
+      "name": "Analog Megger Meter",
+      "src": "assets/images/a/23.jpeg",
+      "page": 9
+    },
+    {
+      "n": 24,
+      "name": "Busbar",
+      "src": "assets/images/a/24.jpeg",
+      "page": 10
+    },
+    {
+      "n": 25,
+      "name": "Pin Insulator",
+      "src": "assets/images/a/25.jpeg",
+      "page": 10
+    },
+    {
+      "n": 26,
+      "name": "Analog Earth Tester",
+      "src": "assets/images/a/26.jpeg",
+      "page": 10
+    },
+    {
+      "n": 27,
+      "name": "Isolator",
+      "src": "assets/images/a/27.jpeg",
+      "page": 11
+    },
+    {
+      "n": 28,
+      "name": "VCB — Vacuum Circuit Breaker",
+      "src": "assets/images/a/28.jpeg",
+      "page": 11
+    },
+    {
+      "n": 29,
+      "name": "Single-Phase Transformer",
+      "src": "assets/images/a/29.jpeg",
+      "page": 11
+    },
+    {
+      "n": 30,
+      "name": "ACB — Air Circuit Breaker",
+      "src": "assets/images/a/30.jpeg",
+      "page": 12
+    },
+    {
+      "n": 31,
+      "name": "Horn Gap Arrester",
+      "src": "assets/images/a/31.jpeg",
+      "page": 12
+    },
+    {
+      "n": 32,
+      "name": "LT Bushing",
+      "src": "assets/images/a/32.jpeg",
+      "page": 12
+    },
+    {
+      "n": 33,
+      "name": "HT Bushing",
+      "src": "assets/images/a/33.jpeg",
+      "page": 13
+    },
+    {
+      "n": 34,
+      "name": "Digital Voltmeter",
+      "src": "assets/images/a/34.jpeg",
+      "page": 13
+    },
+    {
+      "n": 35,
+      "name": "Digital Ammeter",
+      "src": "assets/images/a/35.jpeg",
+      "page": 13
+    },
+    {
+      "n": 36,
+      "name": "Digital Multimeter",
+      "src": "assets/images/a/36.jpeg",
+      "page": 14
+    }
+  ],
+  "b": [
+    {
+      "n": 1,
+      "name": "DOL Starter Control Box",
+      "src": "assets/images/b/01.jpeg",
+      "page": 8
+    },
+    {
+      "n": 2,
+      "name": "1-Pole MCB",
+      "src": "assets/images/b/02.jpeg",
+      "page": 8
+    },
+    {
+      "n": 3,
+      "name": "Clamp Meter",
+      "src": "assets/images/b/03.jpeg",
+      "page": 8
+    },
+    {
+      "n": 4,
+      "name": "Digital Megger Meter",
+      "src": "assets/images/b/04.jpeg",
+      "page": 9
+    },
+    {
+      "n": 5,
+      "name": "Star-Delta Controller",
+      "src": "assets/images/b/05.jpeg",
+      "page": 9
+    },
+    {
+      "n": 6,
+      "name": "Single-Phase Induction Motor",
+      "src": "assets/images/b/06.jpeg",
+      "page": 9
+    },
+    {
+      "n": 7,
+      "name": "RCBO",
+      "src": "assets/images/b/07.jpeg",
+      "page": 10
+    },
+    {
+      "n": 8,
+      "name": "2-Pole MCB",
+      "src": "assets/images/b/08.jpeg",
+      "page": 10
+    },
+    {
+      "n": 9,
+      "name": "Metal Sensor",
+      "src": "assets/images/b/09.jpeg",
+      "page": 10
+    },
+    {
+      "n": 10,
+      "name": "3-Pole MCB",
+      "src": "assets/images/b/10.jpeg",
+      "page": 11
+    },
+    {
+      "n": 11,
+      "name": "Phase Failure Relay",
+      "src": "assets/images/b/11.jpeg",
+      "page": 11
+    },
+    {
+      "n": 12,
+      "name": "Analog Megger Meter",
+      "src": "assets/images/b/12.jpeg",
+      "page": 11
+    },
+    {
+      "n": 13,
+      "name": "Analog Earth Tester (V.V.I)",
+      "src": "assets/images/b/13.jpeg",
+      "page": 12
+    },
+    {
+      "n": 14,
+      "name": "RT Fuse",
+      "src": "assets/images/b/14.jpeg",
+      "page": 12
+    },
+    {
+      "n": 15,
+      "name": "Single-Phase Dual-Capacitor Motor Connection",
+      "src": "assets/images/b/15.jpeg",
+      "page": 12
+    },
+    {
+      "n": 16,
+      "name": "Capacitor",
+      "src": "assets/images/b/16.jpeg",
+      "page": 13
+    },
+    {
+      "n": 17,
+      "name": "SSR — Solid State Relay",
+      "src": "assets/images/b/17.jpeg",
+      "page": 13
+    },
+    {
+      "n": 18,
+      "name": "Relay",
+      "src": "assets/images/b/18.jpeg",
+      "page": 13
+    },
+    {
+      "n": 19,
+      "name": "Photo Sensor",
+      "src": "assets/images/b/19.jpeg",
+      "page": 14
+    },
+    {
+      "n": 20,
+      "name": "Cable Clip",
+      "src": "assets/images/b/20.jpeg",
+      "page": 14
+    },
+    {
+      "n": 21,
+      "name": "Cable Tie",
+      "src": "assets/images/b/21.jpeg",
+      "page": 14
+    },
+    {
+      "n": 22,
+      "name": "Cable Tray",
+      "src": "assets/images/b/22.jpeg",
+      "page": 15
+    },
+    {
+      "n": 23,
+      "name": "Digital Earth Tester",
+      "src": "assets/images/b/23.jpeg",
+      "page": 15
+    },
+    {
+      "n": 24,
+      "name": "Analog Multimeter",
+      "src": "assets/images/b/24.jpeg",
+      "page": 15
+    },
+    {
+      "n": 25,
+      "name": "Clamp Meter",
+      "src": "assets/images/b/25.jpeg",
+      "page": 16
+    },
+    {
+      "n": 26,
+      "name": "Digital Ammeter",
+      "src": "assets/images/b/26.jpeg",
+      "page": 16
+    },
+    {
+      "n": 27,
+      "name": "Analog Voltmeter",
+      "src": "assets/images/b/27.jpeg",
+      "page": 16
+    },
+    {
+      "n": 28,
+      "name": "Analog Ammeter",
+      "src": "assets/images/b/28.jpeg",
+      "page": 17
+    },
+    {
+      "n": 29,
+      "name": "DPIC — Double Pole Iron Clad Main Switch",
+      "src": "assets/images/b/29.jpeg",
+      "page": 17
+    },
+    {
+      "n": 30,
+      "name": "HT Fuse",
+      "src": "assets/images/b/30.jpeg",
+      "page": 17
+    },
+    {
+      "n": 31,
+      "name": "HRC Fuse",
+      "src": "assets/images/b/31.jpeg",
+      "page": 18
+    },
+    {
+      "n": 32,
+      "name": "MPCB — Motor Protection Circuit Breaker",
+      "src": "assets/images/b/32.jpeg",
+      "page": 18
+    },
+    {
+      "n": 33,
+      "name": "SPD — Surge Protection Device",
+      "src": "assets/images/b/33.jpeg",
+      "page": 18
+    },
+    {
+      "n": 34,
+      "name": "Magnetic Contactor",
+      "src": "assets/images/b/34.jpeg",
+      "page": 19
+    },
+    {
+      "n": 35,
+      "name": "Overload Relay",
+      "src": "assets/images/b/35.jpeg",
+      "page": 19
+    },
+    {
+      "n": 36,
+      "name": "RCCB",
+      "src": "assets/images/b/36.jpeg",
+      "page": 19
+    },
+    {
+      "n": 37,
+      "name": "Grip Fuse",
+      "src": "assets/images/b/37.jpeg",
+      "page": 20
+    },
+    {
+      "n": 38,
+      "name": "Single-Phase Energy Meter",
+      "src": "assets/images/b/38.jpeg",
+      "page": 20
+    },
+    {
+      "n": 39,
+      "name": "Digital Voltmeter",
+      "src": "assets/images/b/39.jpeg",
+      "page": 20
+    },
+    {
+      "n": 40,
+      "name": "SMPS — Switching Mode Power Supply",
+      "src": "assets/images/b/40.jpeg",
+      "page": 21
+    },
+    {
+      "n": 41,
+      "name": "MCCB",
+      "src": "assets/images/b/41.jpeg",
+      "page": 21
+    },
+    {
+      "n": 42,
+      "name": "Three-Phase Energy Meter",
+      "src": "assets/images/b/42.jpeg",
+      "page": 21
+    },
+    {
+      "n": 43,
+      "name": "Cable Lug",
+      "src": "assets/images/b/43.jpeg",
+      "page": 22
+    },
+    {
+      "n": 44,
+      "name": "Digital Multimeter",
+      "src": "assets/images/b/44.jpeg",
+      "page": 22
+    },
+    {
+      "n": 45,
+      "name": "Twin Timer",
+      "src": "assets/images/b/45.jpeg",
+      "page": 22
+    },
+    {
+      "n": 46,
+      "name": "Timer",
+      "src": "assets/images/b/46.jpeg",
+      "page": 23
+    },
+    {
+      "n": 47,
+      "name": "Digital Ammeter",
+      "src": "assets/images/b/47.jpeg",
+      "page": 23
+    },
+    {
+      "n": 48,
+      "name": "Float Switch",
+      "src": "assets/images/b/48.jpeg",
+      "page": 23
+    },
+    {
+      "n": 49,
+      "name": "Push Switch",
+      "src": "assets/images/b/49.jpeg",
+      "page": 24
+    },
+    {
+      "n": 50,
+      "name": "Counter",
+      "src": "assets/images/b/50.jpeg",
+      "page": 24
+    },
+    {
+      "n": 51,
+      "name": "TPIC — Triple Pole Iron Clad Main Switch",
+      "src": "assets/images/b/51.jpeg",
+      "page": 24
+    },
+    {
+      "n": 52,
+      "name": "Floatless Relay",
+      "src": "assets/images/b/52.jpeg",
+      "page": 25
+    },
+    {
+      "n": 53,
+      "name": "Digital 3-Phase Voltmeter",
+      "src": "assets/images/b/53.jpeg",
+      "page": 25
+    },
+    {
+      "n": 54,
+      "name": "Lightning Arrester",
+      "src": "assets/images/b/54.jpeg",
+      "page": 25
+    },
+    {
+      "n": 55,
+      "name": "Changeover Switch",
+      "src": "assets/images/b/55.jpeg",
+      "page": 25
+    },
+    {
+      "n": 56,
+      "name": "Digital Multimeter",
+      "src": "assets/images/b/56.jpeg",
+      "page": 26
+    },
+    {
+      "n": 57,
+      "name": "Busbar",
+      "src": "assets/images/b/57.jpeg",
+      "page": 26
+    },
+    {
+      "n": 58,
+      "name": "Emergency Switch",
+      "src": "assets/images/b/58.jpeg",
+      "page": 26
+    },
+    {
+      "n": 59,
+      "name": "Voltmeter Selector Switch",
+      "src": "assets/images/b/59.jpeg",
+      "page": 26
+    },
+    {
+      "n": 60,
+      "name": "Ammeter Selector Switch",
+      "src": "assets/images/b/60.jpeg",
+      "page": 26
+    },
+    {
+      "n": 61,
+      "name": "Selector Switch",
+      "src": "assets/images/b/61.jpeg",
+      "page": 26
+    }
+  ],
+  "diagrams": [
+    {
+      "category": "B",
+      "name": "DOL Starter — Power Circuit",
+      "src": "assets/images/diagrams/b-p01-1.png",
+      "page": 1
+    },
+    {
+      "category": "B",
+      "name": "DOL Starter — Control Circuit",
+      "src": "assets/images/diagrams/b-p01-2.jpeg",
+      "page": 1
+    },
+    {
+      "category": "B",
+      "name": "Star-Delta Starter — Connection Diagram",
+      "src": "assets/images/diagrams/b-p03-1.jpeg",
+      "page": 3
+    },
+    {
+      "category": "B",
+      "name": "Reverse-Forward Starter — Connection Diagram",
+      "src": "assets/images/diagrams/b-p05-1.jpeg",
+      "page": 5
+    },
+    {
+      "category": "B",
+      "name": "Motor Control — Wiring Diagram",
+      "src": "assets/images/diagrams/b-p07-1.jpeg",
+      "page": 7
+    },
+    {
+      "category": "B",
+      "name": "Earthing — Electrode & Connection Diagram",
+      "src": "assets/images/diagrams/b-p28-1.jpeg",
+      "page": 28
+    },
+    {
+      "category": "A",
+      "name": "11kV/0.4kV Indoor Substation — Single Line Diagram",
+      "src": "assets/images/diagrams/a-p03-1.jpeg",
+      "page": 3
+    },
+    {
+      "category": "A",
+      "name": "11kV 3-Pole Indoor Isolator",
+      "src": "assets/images/diagrams/a-p04-1.jpeg",
+      "page": 4
+    },
+    {
+      "category": "A",
+      "name": "Outdoor Substation Isolator",
+      "src": "assets/images/diagrams/a-p04-2.jpeg",
+      "page": 4
+    },
+    {
+      "category": "A",
+      "name": "Lightning Arrester — Structure & Connection",
+      "src": "assets/images/diagrams/a-p05-1.jpeg",
+      "page": 5
+    },
+    {
+      "category": "A",
+      "name": "11kV Lightning Arrester",
+      "src": "assets/images/diagrams/a-p05-2.jpeg",
+      "page": 5
+    },
+    {
+      "category": "A",
+      "name": "Drop-Out Fuse — Parts",
+      "src": "assets/images/diagrams/a-p05-3.jpeg",
+      "page": 5
+    },
+    {
+      "category": "A",
+      "name": "Drop-Out Fuse — Pole Installation",
+      "src": "assets/images/diagrams/a-p05-4.jpeg",
+      "page": 5
+    },
+    {
+      "category": "A",
+      "name": "LT Current Transformer (CT)",
+      "src": "assets/images/diagrams/a-p06-1.jpeg",
+      "page": 6
+    },
+    {
+      "category": "A",
+      "name": "11kV HT Current Transformer (CT)",
+      "src": "assets/images/diagrams/a-p06-2.jpeg",
+      "page": 6
+    },
+    {
+      "category": "A",
+      "name": "11kV Potential Transformer (PT)",
+      "src": "assets/images/diagrams/a-p06-3.jpeg",
+      "page": 6
+    },
+    {
+      "category": "A",
+      "name": "11kV CT–PT Metering Connection",
+      "src": "assets/images/diagrams/a-p06-4.jpeg",
+      "page": 6
+    },
+    {
+      "category": "A",
+      "name": "LBS — Load Break Switch with HRC Fuse",
+      "src": "assets/images/diagrams/a-p07-1.jpeg",
+      "page": 7
+    },
+    {
+      "category": "A",
+      "name": "VCB — Vacuum Circuit Breaker",
+      "src": "assets/images/diagrams/a-p07-2.jpeg",
+      "page": 7
+    },
+    {
+      "category": "A",
+      "name": "11kV/0.4kV Transformer",
+      "src": "assets/images/diagrams/a-p10-1.jpeg",
+      "page": 10
+    },
+    {
+      "category": "A",
+      "name": "Buchholz Relay",
+      "src": "assets/images/diagrams/a-p10-2.jpeg",
+      "page": 10
+    },
+    {
+      "category": "A",
+      "name": "Digital Megger Meter",
+      "src": "assets/images/diagrams/a-p10-3.jpeg",
+      "page": 10
+    },
+    {
+      "category": "A",
+      "name": "Analog Megger Meter",
+      "src": "assets/images/diagrams/a-p10-4.jpeg",
+      "page": 10
+    },
+    {
+      "category": "A",
+      "name": "ACB",
+      "src": "assets/images/diagrams/a-p10-5.jpeg",
+      "page": 10
+    },
+    {
+      "category": "A",
+      "name": "MCCB",
+      "src": "assets/images/diagrams/a-p10-6.jpeg",
+      "page": 10
+    },
+    {
+      "category": "A",
+      "name": "MCB",
+      "src": "assets/images/diagrams/a-p10-7.jpeg",
+      "page": 10
+    },
+    {
+      "category": "A",
+      "name": "Copper Busbar & ATS Panel",
+      "src": "assets/images/diagrams/a-p10-8.jpeg",
+      "page": 10
+    },
+    {
+      "category": "A",
+      "name": "PFI Panel",
+      "src": "assets/images/diagrams/a-p11-1.jpeg",
+      "page": 11
+    },
+    {
+      "category": "A",
+      "name": "PFI Relay",
+      "src": "assets/images/diagrams/a-p11-2.jpeg",
+      "page": 11
+    },
+    {
+      "category": "A",
+      "name": "Power Capacitor (kVAR)",
+      "src": "assets/images/diagrams/a-p11-3.jpeg",
+      "page": 11
+    },
+    {
+      "category": "A",
+      "name": "HRC Fuse",
+      "src": "assets/images/diagrams/a-p11-4.jpeg",
+      "page": 11
+    },
+    {
+      "category": "A",
+      "name": "Types of Insulator",
+      "src": "assets/images/diagrams/a-p12-1.jpeg",
+      "page": 12
+    },
+    {
+      "category": "A",
+      "name": "Generator",
+      "src": "assets/images/diagrams/a-p12-2.jpeg",
+      "page": 12
+    },
+    {
+      "category": "A",
+      "name": "HT XLPE Cable — Parts",
+      "src": "assets/images/diagrams/a-p12-3.jpeg",
+      "page": 12
+    },
+    {
+      "category": "A",
+      "name": "LT Cable — Parts",
+      "src": "assets/images/diagrams/a-p12-4.jpeg",
+      "page": 12
+    }
+  ]
+}
