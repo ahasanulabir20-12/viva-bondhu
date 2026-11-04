@@ -23,6 +23,33 @@
   };
 
   let seen = new Set(safeStorage.get('abc-viva-seen', []));
+
+  // Feedback sounds (Web Audio, no audio files): correct = rising chime, wrong = low buzz.
+  let soundCtx = null;
+  function playTone(freq, start, duration, type, volume) {
+    try {
+      if (!soundCtx) soundCtx = new (window.AudioContext || window.webkitAudioContext)();
+      if (soundCtx.state === 'suspended') soundCtx.resume();
+      const osc = soundCtx.createOscillator();
+      const gain = soundCtx.createGain();
+      const t = soundCtx.currentTime + start;
+      osc.type = type; osc.frequency.setValueAtTime(freq, t);
+      gain.gain.setValueAtTime(0.0001, t);
+      gain.gain.exponentialRampToValueAtTime(volume, t + 0.02);
+      gain.gain.exponentialRampToValueAtTime(0.0001, t + duration);
+      osc.connect(gain).connect(soundCtx.destination);
+      osc.start(t); osc.stop(t + duration + 0.05);
+    } catch (e) { /* sound unavailable: stay silent */ }
+  }
+  function playCorrectSound() {
+    playTone(523.25, 0, 0.16, 'sine', 0.16);
+    playTone(659.25, 0.1, 0.16, 'sine', 0.16);
+    playTone(783.99, 0.2, 0.24, 'sine', 0.16);
+  }
+  function playWrongSound() {
+    playTone(220, 0, 0.18, 'triangle', 0.14);
+    playTone(155.56, 0.14, 0.26, 'triangle', 0.14);
+  }
   const sectionState = {
     A: { query: '', topic: 'সব', expandedAll: false },
     B: { query: '', topic: 'সব', expandedAll: false }
@@ -326,6 +353,7 @@
     $('#mockAnswerText').innerHTML = answerHTML(item.answer);
     $('#mockAnswer').hidden = true;
     $('#mockAnswer').classList.remove('revealed');
+    $('#mockAnswer').classList.remove('celebrate');
     $('#mockThink').hidden = false;
     $('#mockRevealWrap').hidden = false;
     $('#mockGrade').hidden = true;
@@ -371,8 +399,14 @@
   $('#mockGrade').addEventListener('click', event => {
     const button = event.target.closest('.grade-btn'); if (!button) return;
     const item = mockItems[mockIndex];
-    if (button.dataset.grade === 'pass') mockPassed++;
-    else mockWeak[item.topic] = (mockWeak[item.topic] || 0) + 1;
+    if (button.dataset.grade === 'pass') {
+      mockPassed++;
+      playCorrectSound();
+      $('#mockAnswer').classList.add('celebrate');
+    } else {
+      playWrongSound();
+      mockWeak[item.topic] = (mockWeak[item.topic] || 0) + 1;
+    }
     const key = `${item._type}-${item.id}`;
     if (!seen.has(key)) { seen.add(key); safeStorage.set('abc-viva-seen',[...seen]); updateProgress(item._type); }
     mockIndex++;
@@ -438,6 +472,7 @@
     $('#quizOptions').innerHTML = options.map(name => `<button class="quiz-option" type="button" data-name="${esc(name)}">${esc(name)}</button>`).join('');
     const feedback = $('#quizFeedback');
     feedback.hidden = true; feedback.className = 'quiz-feedback'; feedback.textContent = '';
+    $('.quiz-image-wrap').classList.remove('celebrate');
     $('#imageQuizNext').hidden = true;
     $('#imageQuizNext').textContent = imageQuizIndex === imageQuizItems.length - 1 ? 'ফলাফল দেখি →' : 'পরের ছবি →';
   }
@@ -468,7 +503,14 @@
     const item = imageQuizItems[imageQuizIndex];
     const selected = button.dataset.name;
     const correct = selected === item.name;
-    if (correct) imageQuizScore++;
+    if (correct) {
+      imageQuizScore++;
+      playCorrectSound();
+      const wrap = $('.quiz-image-wrap');
+      wrap.classList.remove('celebrate'); void wrap.offsetWidth; wrap.classList.add('celebrate');
+    } else {
+      playWrongSound();
+    }
     $('#imageLiveScore').textContent = toBn(imageQuizScore);
     $$('.quiz-option', $('#quizOptions')).forEach(option => {
       option.disabled = true;
@@ -567,6 +609,38 @@
   const backTop = $('#backTop');
   window.addEventListener('scroll', () => backTop.classList.toggle('visible', scrollY > 700), {passive:true});
   backTop.addEventListener('click', () => window.scrollTo({top:0,behavior:'smooth'}));
+
+  // Desktop only: scrolling down slides the search/filter bars away to the
+  // right and leaves a square blue button; the button (or scrolling to the
+  // top) brings the bars back.
+  const panelRestore = $('#panelRestore');
+  const desktopView = window.matchMedia('(min-width: 1001px)');
+  let lastScrollY = scrollY;
+  let panelsMinimized = false;
+  let manualRestore = false;
+  function setPanelsMinimized(minimize) {
+    panelsMinimized = minimize;
+    document.body.classList.toggle('panels-minimized', minimize);
+    panelRestore.setAttribute('aria-expanded', String(!minimize));
+  }
+  function onPanelScroll() {
+    if (!desktopView.matches) { if (panelsMinimized) setPanelsMinimized(false); lastScrollY = scrollY; return; }
+    const goingDown = scrollY > lastScrollY;
+    if (scrollY <= 120) { manualRestore = false; if (panelsMinimized) setPanelsMinimized(false); }
+    else if (goingDown && scrollY > 320 && !panelsMinimized && !manualRestore) setPanelsMinimized(true);
+    lastScrollY = scrollY;
+  }
+  let panelScrollTick = false;
+  window.addEventListener('scroll', () => {
+    if (panelScrollTick) return;
+    panelScrollTick = true;
+    requestAnimationFrame(() => { panelScrollTick = false; onPanelScroll(); });
+  }, {passive:true});
+  panelRestore.addEventListener('click', () => {
+    manualRestore = true;
+    setPanelsMinimized(false);
+  });
+  desktopView.addEventListener('change', () => { if (!desktopView.matches && panelsMinimized) setPanelsMinimized(false); });
 
   let toastTimer;
   function showToast(message) {

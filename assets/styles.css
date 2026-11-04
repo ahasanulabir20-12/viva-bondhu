@@ -146,3 +146,28 @@ svg{display:block}
 @media(hover:none){.btn:hover,.license-card:hover,.gallery-card:hover,.quiz-option:hover:not(:disabled),.grade-btn:hover{transform:none}}
 
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}.float-icon,.visual-spark,.bulb-art,.pulse-dot,.fan-rotor,.brand-orbit,.brand-orbit span,.brand-orbit b,.brand-watermarks span,.creator-chip:after,.practice-card:before,.practice-hero-icon:after,.footer-seal,.footer-machine *{animation:none!important}.current-dot{display:none}.qa-card,.btn,.gallery-card,.answer-shell{transition:none!important}}
+
+/* Desktop only: bigger answers + collapsible search/filter bar */
+@media(min-width:1001px){
+  .answer-text{font-size:17px;line-height:1.95}
+  .exam-answer p,.random-answer p{font-size:17px;line-height:1.9}
+  .qa-control-panel{transition:transform .45s cubic-bezier(.2,.8,.2,1),opacity .35s ease}
+  body.panels-minimized .qa-control-panel{transform:translateX(calc(100% + 30px)) scale(.92);opacity:0;pointer-events:none}
+  .panel-restore{display:none}
+  body.panels-minimized .panel-restore{display:grid;place-items:center;position:fixed;right:22px;top:96px;width:54px;height:54px;border:0;border-radius:12px;background:#2563eb;color:#fff;box-shadow:0 14px 34px rgba(37,99,235,.38);cursor:pointer;z-index:90;animation:panelBtnIn .35s ease-out}
+  .panel-restore svg{width:25px;height:25px;fill:none;stroke:#fff;stroke-width:2.4;stroke-linecap:round}
+  .panel-restore:hover{background:#1d4fd7}
+  @keyframes panelBtnIn{from{transform:translateX(24px) scale(.7);opacity:0}}
+}
+.panel-restore{display:none}
+
+/* Correct / wrong answer feedback: sound is in app.js, motion is here */
+@keyframes correctPop{0%{transform:scale(1)}40%{transform:scale(1.05)}100%{transform:scale(1)}}
+@keyframes wrongShake{0%,100%{transform:translateX(0)}20%{transform:translateX(-6px)}40%{transform:translateX(6px)}60%{transform:translateX(-4px)}80%{transform:translateX(4px)}}
+@keyframes celebratePulse{0%{box-shadow:0 0 0 0 rgba(15,106,88,.35)}100%{box-shadow:0 0 0 18px rgba(15,106,88,0)}}
+.quiz-option.correct{animation:correctPop .45s ease}
+.quiz-option.wrong{animation:wrongShake .4s ease}
+.quiz-image-wrap.celebrate{animation:celebratePulse .7s ease-out}
+.quiz-feedback.correct{animation:correctPop .4s ease}
+.exam-answer.celebrate{animation:correctPop .45s ease}
+@media(prefers-reduced-motion:reduce){.quiz-option.correct,.quiz-option.wrong,.quiz-image-wrap.celebrate,.quiz-feedback.correct,.exam-answer.celebrate,body.panels-minimized .panel-restore{animation:none!important}}
