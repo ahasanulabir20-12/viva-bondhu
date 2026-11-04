@@ -617,7 +617,7 @@
   const desktopView = window.matchMedia('(min-width: 1001px)');
   let lastScrollY = scrollY;
   let panelsMinimized = false;
-  let manualRestore = false;
+  let restoreY = null;
   function setPanelsMinimized(minimize) {
     panelsMinimized = minimize;
     document.body.classList.toggle('panels-minimized', minimize);
@@ -626,8 +626,9 @@
   function onPanelScroll() {
     if (!desktopView.matches) { if (panelsMinimized) setPanelsMinimized(false); lastScrollY = scrollY; return; }
     const goingDown = scrollY > lastScrollY;
-    if (scrollY <= 120) { manualRestore = false; if (panelsMinimized) setPanelsMinimized(false); }
-    else if (goingDown && scrollY > 320 && !panelsMinimized && !manualRestore) setPanelsMinimized(true);
+    if (scrollY <= 120) { restoreY = null; if (panelsMinimized) setPanelsMinimized(false); }
+    else if (restoreY !== null && scrollY < restoreY - 60) { restoreY = null; }
+    else if (goingDown && scrollY > 320 && !panelsMinimized && (restoreY === null || scrollY > restoreY + 60)) { restoreY = null; setPanelsMinimized(true); }
     lastScrollY = scrollY;
   }
   let panelScrollTick = false;
@@ -637,7 +638,7 @@
     requestAnimationFrame(() => { panelScrollTick = false; onPanelScroll(); });
   }, {passive:true});
   panelRestore.addEventListener('click', () => {
-    manualRestore = true;
+    restoreY = scrollY;
     setPanelsMinimized(false);
   });
   desktopView.addEventListener('change', () => { if (!desktopView.matches && panelsMinimized) setPanelsMinimized(false); });
