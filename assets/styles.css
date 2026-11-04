@@ -149,8 +149,8 @@ svg{display:block}
 
 /* Desktop only: bigger answers + collapsible search/filter bar */
 @media(min-width:1001px){
-  .answer-text{font-size:17px;line-height:1.95}
-  .exam-answer p,.random-answer p{font-size:17px;line-height:1.9}
+  .answer-text{font-size:21px;line-height:1.95}
+  .exam-answer p,.random-answer p{font-size:21px;line-height:1.9}
   .qa-control-panel{transition:transform .45s cubic-bezier(.2,.8,.2,1),opacity .35s ease}
   body.panels-minimized .qa-control-panel{transform:translateX(calc(100% + 30px)) scale(.92);opacity:0;pointer-events:none}
   .panel-restore{display:none}
