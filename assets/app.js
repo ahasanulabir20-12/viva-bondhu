@@ -420,7 +420,7 @@
 
   // Image Recognition Quiz
   const imageQuizModal = $('#imageQuizModal');
-  let imageQuizCategory = 'A';
+  let imageQuizCategory = 'MIX';
   let imageQuizItems = [];
   let imageQuizIndex = 0;
   let imageQuizScore = 0;
