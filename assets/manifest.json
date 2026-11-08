@@ -795,6 +795,218 @@
       "name": "LT Cable — Parts",
       "src": "assets/images/diagrams/a-p12-4.jpeg",
       "page": 12
+    },
+    {
+      "category": "C",
+      "name": "Conductor Code — RE, RM, SE, SM",
+      "src": "assets/images/diagrams/c-p15-table.jpeg",
+      "page": 15
+    }
+  ],
+  "c": [
+    {
+      "n": 1,
+      "name": "Batten Holder",
+      "src": "assets/images/c/01.jpeg",
+      "page": 2
+    },
+    {
+      "n": 2,
+      "name": "Angle Holder",
+      "src": "assets/images/c/02.jpeg",
+      "page": 2
+    },
+    {
+      "n": 3,
+      "name": "Pendant Holder",
+      "src": "assets/images/c/03.jpeg",
+      "page": 2
+    },
+    {
+      "n": 4,
+      "name": "Power Socket",
+      "src": "assets/images/c/04.jpeg",
+      "page": 7
+    },
+    {
+      "n": 5,
+      "name": "Gang Switch — Super Star",
+      "src": "assets/images/c/05.jpeg",
+      "page": 8
+    },
+    {
+      "n": 6,
+      "name": "Gang Switch — Walton",
+      "src": "assets/images/c/06.jpeg",
+      "page": 8
+    },
+    {
+      "n": 7,
+      "name": "Gang Switch — Indicator",
+      "src": "assets/images/c/07.jpeg",
+      "page": 8
+    },
+    {
+      "n": 8,
+      "name": "Tumbler Switch",
+      "src": "assets/images/c/08.jpeg",
+      "page": 8
+    },
+    {
+      "n": 9,
+      "name": "DP Switch",
+      "src": "assets/images/c/09.jpeg",
+      "page": 8
+    },
+    {
+      "n": 10,
+      "name": "DP Switch — Duravolt",
+      "src": "assets/images/c/10.jpeg",
+      "page": 8
+    },
+    {
+      "n": 11,
+      "name": "3 Pin Round Plug",
+      "src": "assets/images/c/11.jpeg",
+      "page": 9
+    },
+    {
+      "n": 12,
+      "name": "3 Pin Flat Plug",
+      "src": "assets/images/c/12.jpeg",
+      "page": 9
+    },
+    {
+      "n": 13,
+      "name": "Fan Capacitor",
+      "src": "assets/images/c/13.jpeg",
+      "page": 9
+    },
+    {
+      "n": 14,
+      "name": "Ceiling Fan Copper Coil",
+      "src": "assets/images/c/14.jpeg",
+      "page": 10
+    },
+    {
+      "n": 15,
+      "name": "Tube Light Ballast",
+      "src": "assets/images/c/15.jpeg",
+      "page": 10
+    },
+    {
+      "n": 16,
+      "name": "PVC Channel",
+      "src": "assets/images/c/16.jpeg",
+      "page": 10
+    },
+    {
+      "n": 17,
+      "name": "PVC Conduit Pipe",
+      "src": "assets/images/c/17.jpeg",
+      "page": 11
+    },
+    {
+      "n": 18,
+      "name": "PVC Elbow",
+      "src": "assets/images/c/18.jpeg",
+      "page": 11
+    },
+    {
+      "n": 19,
+      "name": "PVC Bend",
+      "src": "assets/images/c/19.jpeg",
+      "page": 11
+    },
+    {
+      "n": 20,
+      "name": "Saddle Clamp",
+      "src": "assets/images/c/20.jpeg",
+      "page": 12
+    },
+    {
+      "n": 21,
+      "name": "Piano 4 Hole Switch Box",
+      "src": "assets/images/c/21.jpeg",
+      "page": 12
+    },
+    {
+      "n": 22,
+      "name": "Circular Box",
+      "src": "assets/images/c/22.jpeg",
+      "page": 12
+    },
+    {
+      "n": 23,
+      "name": "3/3 Holder Board",
+      "src": "assets/images/c/23.jpeg",
+      "page": 13
+    },
+    {
+      "n": 24,
+      "name": "Ceiling Rose",
+      "src": "assets/images/c/24.jpeg",
+      "page": 13
+    },
+    {
+      "n": 25,
+      "name": "Start-Stop Push Button Switch",
+      "src": "assets/images/c/25.jpeg",
+      "page": 13
+    },
+    {
+      "n": 26,
+      "name": "Piano 1-Way Switch",
+      "src": "assets/images/c/26.jpeg",
+      "page": 14
+    },
+    {
+      "n": 27,
+      "name": "Piano 2 Pin Socket",
+      "src": "assets/images/c/27.jpeg",
+      "page": 14
+    },
+    {
+      "n": 28,
+      "name": "Piano Fuse",
+      "src": "assets/images/c/28.jpeg",
+      "page": 14
+    },
+    {
+      "n": 29,
+      "name": "Piano Regulator",
+      "src": "assets/images/c/29.jpeg",
+      "page": 15
+    },
+    {
+      "n": 30,
+      "name": "2-Pin Plug",
+      "src": "assets/images/c/30.jpeg",
+      "page": 15
+    },
+    {
+      "n": 31,
+      "name": "Royal Plug",
+      "src": "assets/images/c/31.jpeg",
+      "page": 16
+    },
+    {
+      "n": 32,
+      "name": "Cable Tie",
+      "src": "assets/images/c/32.jpeg",
+      "page": 16
+    },
+    {
+      "n": 33,
+      "name": "Cable Clip",
+      "src": "assets/images/c/33.jpeg",
+      "page": 16
+    },
+    {
+      "n": 34,
+      "name": "Wooden Screw",
+      "src": "assets/images/c/34.jpeg",
+      "page": 17
     }
   ]
 }

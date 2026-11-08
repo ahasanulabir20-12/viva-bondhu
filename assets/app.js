@@ -52,11 +52,12 @@
   }
   const sectionState = {
     A: { query: '', topic: 'সব', expandedAll: false },
-    B: { query: '', topic: 'সব', expandedAll: false }
+    B: { query: '', topic: 'সব', expandedAll: false },
+    C: { query: '', topic: 'সব', expandedAll: false }
   };
 
-  const questions = { A: data.aQuestions, B: data.bQuestions };
-  const lists = { A: $('#questionsA'), B: $('#questionsB') };
+  const questions = { A: data.aQuestions, B: data.bQuestions, C: data.cQuestions };
+  const lists = { A: $('#questionsA'), B: $('#questionsB'), C: $('#questionsC') };
 
   function answerHTML(text) {
     return esc(text)
@@ -72,7 +73,7 @@
   }
 
   function renderQuestions(type) {
-    const label = type === 'A' ? 'A' : 'B';
+    const label = type;
     lists[type].innerHTML = questions[type].map(q => {
       const related = q.related?.length ? `<div class="related-visuals">${q.related.map(visualHTML).join('')}</div>` : '';
       return `<article class="qa-card" data-type="${type}" data-id="${q.id}" data-topic="${esc(q.topic)}" data-search="${esc((q.question + ' ' + q.answer + ' ' + q.topic).toLocaleLowerCase('bn'))}" id="${type.toLowerCase()}-q-${q.id}">
@@ -153,7 +154,7 @@
     $(`#progressBar${type}`).style.width = `${(count / total) * 100}%`;
   }
 
-  ['A','B'].forEach(type => {
+  ['A','B','C'].forEach(type => {
     renderQuestions(type);
     const search = $(`#search${type}`);
     search.addEventListener('input', () => {
@@ -249,6 +250,7 @@
   const galleryData = {
     A: data.galleryA.map(x => ({...x, category:'A ক্যাটাগরি'})),
     B: data.galleryB.map(x => ({...x, category:'B ক্যাটাগরি'})),
+    C: data.galleryC.map(x => ({...x, category:'C ক্যাটাগরি'})),
     D: data.diagrams.map((x, i) => ({...x, n:i+1, category:`${x.category} সহায়ক ডায়াগ্রাম`}))
   };
   let activeGallery = 'A';
@@ -317,7 +319,8 @@
   function mockPool() {
     if (mockCategory === 'A') return questions.A.map(q => ({...q,_type:'A'}));
     if (mockCategory === 'B') return questions.B.map(q => ({...q,_type:'B'}));
-    return [...questions.A.map(q => ({...q,_type:'A'})), ...questions.B.map(q => ({...q,_type:'B'}))];
+    if (mockCategory === 'C') return questions.C.map(q => ({...q,_type:'C'}));
+    return [...questions.A.map(q => ({...q,_type:'A'})), ...questions.B.map(q => ({...q,_type:'B'})), ...questions.C.map(q => ({...q,_type:'C'}))];
   }
   function updateMockTimer() {
     const mins = Math.floor(mockTimeLeft / 60);
@@ -449,7 +452,8 @@
   function imagePool() {
     if (imageQuizCategory === 'A') return getUniqueImages(galleryData.A);
     if (imageQuizCategory === 'B') return getUniqueImages(galleryData.B);
-    return getUniqueImages([...galleryData.A, ...galleryData.B]);
+    if (imageQuizCategory === 'C') return getUniqueImages(galleryData.C);
+    return getUniqueImages([...galleryData.A, ...galleryData.B, ...galleryData.C]);
   }
   function startImageQuiz() {
     imageQuizItems = shuffle(imagePool()).slice(0,10);
@@ -462,7 +466,7 @@
   function showImageQuizQuestion() {
     const item = imageQuizItems[imageQuizIndex];
     imageQuizAnswered = false;
-    $('#imageRunCategory').textContent = imageQuizCategory === 'MIX' ? 'A + B মিশ্র' : `${imageQuizCategory} ক্যাটাগরি`;
+    $('#imageRunCategory').textContent = imageQuizCategory === 'MIX' ? 'A + B + C মিশ্র' : `${imageQuizCategory} ক্যাটাগরি`;
     $('#imageCounter').textContent = `ছবি ${toBn(imageQuizIndex + 1)} / ${toBn(imageQuizItems.length)}`;
     $('#imageProgressBar').style.width = `${(imageQuizIndex / imageQuizItems.length) * 100}%`;
     $('#quizImage').src = item.src;
@@ -591,9 +595,9 @@
     }
     if (event.key === '/' && !/INPUT|TEXTAREA/.test(document.activeElement.tagName)) {
       event.preventDefault();
-      const aTop = $('#a-section').getBoundingClientRect().top;
-      const bTop = $('#b-section').getBoundingClientRect().top;
-      (Math.abs(bTop) < Math.abs(aTop) ? $('#searchB') : $('#searchA')).focus();
+      const tops = [['#searchA', $('#a-section')], ['#searchB', $('#b-section')], ['#searchC', $('#c-section')]].map(([sel, el]) => [sel, Math.abs(el.getBoundingClientRect().top)]);
+      tops.sort((x, y) => x[1] - y[1]);
+      $(tops[0][0]).focus();
     }
   });
 
@@ -655,7 +659,8 @@
   // Stats from the actual content, not hardcoded display only.
   $('#statA').textContent = toBn(data.meta.aCount);
   $('#statB').textContent = toBn(data.meta.bCount);
-  $('#statPhotos').textContent = toBn(data.meta.aPhotos + data.meta.bPhotos);
+  $('#statC').textContent = toBn(data.meta.cCount);
+  $('#statPhotos').textContent = toBn(data.meta.aPhotos + data.meta.bPhotos + data.meta.cPhotos);
   $('#statDiagrams').textContent = toBn(data.meta.diagramCount);
   $('#updatedDate').textContent = data.meta.updated;
 

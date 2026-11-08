@@ -1,15 +1,15 @@
-# ভাইভা বন্ধু — A + B Category
+# ভাইভা বন্ধু — A + B + C Category
 
 **Brand:** Ahasanul  
 **Type:** Static HTML/CSS/JavaScript website  
-**Purpose:** বাংলাদেশি Electrician A + B Category viva preparation
+**Purpose:** বাংলাদেশি Electrician A + B + C Category viva preparation
 
 ## Project structure
 
 - `index.html` — main website
 - `assets/styles.css` — responsive design and animations
 - `assets/app.js` — questions, quiz, mock viva and interactions
-- `assets/data.js` — A/B question and gallery data
+- `assets/data.js` — A/B/C question and gallery data
 - `assets/images/` — all supplied viva images and diagrams
 - `assets/fonts/` — local Noto Sans Bengali font
 
