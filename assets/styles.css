@@ -149,6 +149,7 @@ svg{display:block}
 
 /* Desktop only: bigger answers + collapsible search/filter bar */
 @media(min-width:1001px){
+  .question-copy{font-size:21px;line-height:1.55}
   .answer-text{font-size:21px;line-height:1.95}
   .exam-answer p,.random-answer p{font-size:21px;line-height:1.9}
   .qa-control-panel{transition:transform .45s cubic-bezier(.2,.8,.2,1),opacity .35s ease}
