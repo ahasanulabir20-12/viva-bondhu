@@ -468,10 +468,20 @@
   let imageQuizIndex = 0;
   let imageQuizScore = 0;
   let imageQuizAnswered = false;
+  let imageQuizAdvanceTimer = null;
   let imageQuizFocusBefore = null;
 
   function setImageQuizStage(stage) {
+    if (stage !== 'imageQuizRun') clearImageQuizTimer();
     ['imageQuizSetup','imageQuizRun','imageQuizResult'].forEach(id => { $(`#${id}`).hidden = id !== stage; });
+  }
+  function clearImageQuizTimer() {
+    if (imageQuizAdvanceTimer) { clearTimeout(imageQuizAdvanceTimer); imageQuizAdvanceTimer = null; }
+  }
+  function advanceImageQuiz() {
+    clearImageQuizTimer();
+    imageQuizIndex++;
+    if (imageQuizIndex >= imageQuizItems.length) finishImageQuiz(); else showImageQuizQuestion();
   }
   function openImageQuizModal() {
     imageQuizFocusBefore = document.activeElement;
@@ -482,6 +492,7 @@
     $('.practice-close', imageQuizModal).focus();
   }
   function closeImageQuizModal() {
+    clearImageQuizTimer();
     imageQuizModal.classList.remove('open');
     imageQuizModal.setAttribute('aria-hidden','true');
     document.body.classList.remove('modal-open');
@@ -508,6 +519,7 @@
   }
   function showImageQuizQuestion() {
     const item = imageQuizItems[imageQuizIndex];
+    clearImageQuizTimer();
     imageQuizAnswered = false;
     $('#imageRunCategory').textContent = imageQuizCategory === 'MIX' ? 'A + B + C মিশ্র' : `${imageQuizCategory} ক্যাটাগরি`;
     $('#imageCounter').textContent = `ছবি ${toBn(imageQuizIndex + 1)} / ${toBn(imageQuizItems.length)}`;
@@ -568,12 +580,13 @@
     feedback.hidden = false;
     feedback.classList.add(correct ? 'correct' : 'wrong');
     feedback.textContent = correct ? '✓ সঠিক উত্তর!' : `✕ সঠিক উত্তর: ${item.name}`;
-    $('#imageQuizNext').hidden = false;
+    const nextBtn = $('#imageQuizNext');
+    nextBtn.hidden = false;
+    try { nextBtn.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); } catch (e) {}
+    clearImageQuizTimer();
+    imageQuizAdvanceTimer = setTimeout(advanceImageQuiz, correct ? 1400 : 2200);
   });
-  $('#imageQuizNext').addEventListener('click', () => {
-    imageQuizIndex++;
-    if (imageQuizIndex >= imageQuizItems.length) finishImageQuiz(); else showImageQuizQuestion();
-  });
+  $('#imageQuizNext').addEventListener('click', advanceImageQuiz);
   $('#imageBackSetup').addEventListener('click', () => setImageQuizStage('imageQuizSetup'));
   $('#imageQuizRetry').addEventListener('click', startImageQuiz);
 
