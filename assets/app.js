@@ -456,7 +456,7 @@
     return getUniqueImages([...galleryData.A, ...galleryData.B, ...galleryData.C]);
   }
   function startImageQuiz() {
-    imageQuizItems = shuffle(imagePool()).slice(0,10);
+    imageQuizItems = shuffle(imagePool()).slice(0,20);
     imageQuizIndex = 0;
     imageQuizScore = 0;
     $('#imageLiveScore').textContent = '০';
