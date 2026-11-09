@@ -37,6 +37,7 @@
         <a href="#a-section">A প্রশ্ন</a>
         <a href="#b-section">B প্রশ্ন</a>
         <a href="#c-section">C প্রশ্ন</a>
+        <a href="#prep-section">শেষ মুহূর্তের প্রস্তুতি</a>
         <a href="#gallery">ছবি চেনো</a>
       </nav>
       <div class="creator-mini"><span>AH</span><div><small>Powered by</small><b>AHASANUL</b></div></div>
@@ -57,6 +58,7 @@
           <button class="btn btn-mock" id="openMockExam" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h10v4H7zM5 5H3v16h18V5h-2M7 12h10M7 16h7"/></svg>Mock Viva পরীক্ষা</button>
           <button class="btn btn-image-quiz" id="openImageQuiz" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3zM3 15l5-5 4 4 3-3 6 6M16 9h.01"/></svg>ছবি চেনার Quiz</button>
           <a class="btn btn-soft" href="#gallery"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3zM3 15l5-5 4 4 3-3 6 6M16 9h.01"/></svg>ছবি চেনার অনুশীলন</a>
+          <a class="btn btn-prep" href="#prep-section"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>শেষ মুহূর্তের প্রস্তুতি</a>
         </div>
         <div class="creator-chip"><span>AH</span><div><small>CREATED &amp; BRANDED BY</small><b>Ahasanul</b></div><i>⚡</i></div>
       </div>
@@ -191,6 +193,15 @@
       </div>
       <div class="question-list" id="questionsC"></div>
       <div class="empty-state" id="emptyC" hidden><span>🔎</span><h3>কিছু পাওয়া যায়নি</h3><p>অন্য শব্দ লিখে খুঁজে দেখো।</p></div>
+    </section>
+
+    <section class="qa-section section-shell prep-section" id="prep-section">
+      <div class="section-heading qa-title-row">
+        <div><span class="section-kicker kicker-prep">শেষ মুহূর্ত • A + B + C</span><h2>শেষ মুহূর্তের প্রস্তুতি</h2><p>পরীক্ষার আগের মুহূর্তে এই কোর প্রশ্নগুলো একবার চোখ বুলিয়ে নাও — তিন ক্যাটাগরির সবচেয়ে জরুরি প্রশ্ন–উত্তর এক জায়গায়।</p><span class="section-brand-stamp">AHASANUL • LAST-MINUTE PREP</span></div>
+        <div class="section-orb orb-prep"><strong>১৫</strong><span>কোর প্রশ্ন</span></div>
+      </div>
+      <div class="prep-actions"><button class="small-btn" id="prepExpandBtn" type="button">সব উত্তর দেখাও</button><span class="prep-count" id="prepCount"></span></div>
+      <div class="question-list" id="prepList"></div>
     </section>
 
     <section class="gallery-section" id="gallery">

@@ -108,6 +108,47 @@
     updateProgress(type);
   }
 
+  function renderPrep() {
+    const prepList = $('#prepList');
+    if (!prepList) return;
+    const prepItems = (data.prep || []).map(ref => {
+      const q = questions[ref.type] && questions[ref.type].find(item => item.id === ref.id);
+      return q ? { ...q, type: ref.type } : null;
+    }).filter(Boolean);
+    prepList.innerHTML = prepItems.map(q => {
+      const key = `${q.type}${q.id}`;
+      return `<article class="qa-card prep-card" data-type="${q.type}" data-id="${q.id}" id="prep-q-${key}">
+        <button class="question-trigger" type="button" aria-expanded="false" aria-controls="prep-answer-${key}">
+          <span class="question-no">${q.type} • ${String(q.id).padStart(2,'0')}</span>
+          <span class="question-copy"><span class="question-topic">${esc(q.topic)}</span>${esc(q.question)}</span>
+          <span class="toggle-plus" aria-hidden="true">+</span>
+        </button>
+        <div class="answer-shell" id="prep-answer-${key}"><div class="answer-inner"><div class="answer-content">
+          <span class="answer-label">উত্তর</span>
+          <p class="answer-text">${answerHTML(q.answer)}</p>
+        </div></div></div>
+      </article>`;
+    }).join('');
+    prepList.addEventListener('click', event => {
+      const trigger = event.target.closest('.question-trigger');
+      if (!trigger) return;
+      const card = trigger.closest('.qa-card');
+      toggleCard(card, !card.classList.contains('open'), true);
+    });
+    const countEl = $('#prepCount');
+    if (countEl) {
+      const per = type => prepItems.filter(q => q.type === type).length;
+      countEl.textContent = `${toBn(prepItems.length)}টি কোর প্রশ্ন • A ${toBn(per('A'))}টি • B ${toBn(per('B'))}টি • C ${toBn(per('C'))}টি`;
+    }
+    const expandBtn = $('#prepExpandBtn');
+    if (expandBtn) expandBtn.addEventListener('click', () => {
+      const cards = $$('.qa-card', prepList);
+      const shouldOpen = cards.some(card => !card.classList.contains('open'));
+      cards.forEach(card => toggleCard(card, shouldOpen, shouldOpen));
+      expandBtn.textContent = shouldOpen ? 'সব উত্তর লুকাও' : 'সব উত্তর দেখাও';
+    });
+  }
+
   function toggleCard(card, open, countAsSeen = false) {
     card.classList.toggle('open', open);
     $('.question-trigger', card).setAttribute('aria-expanded', String(open));
@@ -162,6 +203,8 @@
       applyFilters(type);
     });
   });
+
+  renderPrep();
 
   $$('.expand-btn').forEach(button => button.addEventListener('click', () => {
     const type = button.dataset.type;
